@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TestFace.png-928659da572ab4a591ca1340f21df172.stex"
+path="res://.import/BadGrass.png-faec7cc6ce7eda44dd78b0762357d0dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/TestFace.png"
-dest_files=[ "res://.import/TestFace.png-928659da572ab4a591ca1340f21df172.stex" ]
+source_file="res://GFX/TestArt/BadGrass.png"
+dest_files=[ "res://.import/BadGrass.png-faec7cc6ce7eda44dd78b0762357d0dd.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BadGrass.png-e7ec89964733174dfdbe5756b352d9d5.stex"
+path="res://.import/big_tree.png-526a86d2395e87214827c503648d912e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/BadGrass.png"
-dest_files=[ "res://.import/BadGrass.png-e7ec89964733174dfdbe5756b352d9d5.stex" ]
+source_file="res://GFX/Nature/big_tree.png"
+dest_files=[ "res://.import/big_tree.png-526a86d2395e87214827c503648d912e.stex" ]
 
 [params]
 

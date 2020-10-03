@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Face2.png-51e9eabad5a6e779e18b9955b7f30fae.stex"
+path="res://.import/small_tree1.png-15f74989adf4c44a41f9a41c19d1e09b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Face2.png"
-dest_files=[ "res://.import/Face2.png-51e9eabad5a6e779e18b9955b7f30fae.stex" ]
+source_file="res://GFX/Nature/small_tree1.png"
+dest_files=[ "res://.import/small_tree1.png-15f74989adf4c44a41f9a41c19d1e09b.stex" ]
 
 [params]
 

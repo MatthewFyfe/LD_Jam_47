@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree.png-70ead24126caae33464d3c4c22fe00d9.stex"
+path="res://.import/TestFace.png-dcf88b8634a2c42dd0679abc6ed3e3bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Tree.png"
-dest_files=[ "res://.import/Tree.png-70ead24126caae33464d3c4c22fe00d9.stex" ]
+source_file="res://GFX/TestArt/TestFace.png"
+dest_files=[ "res://.import/TestFace.png-dcf88b8634a2c42dd0679abc6ed3e3bc.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
