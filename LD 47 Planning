@@ -1,0 +1,27 @@
+LD 47 Planning
+
+Theme: "Stuck in a loop"
+
+Ideas: video game adaptation of A Cluck in Time?
+ - A turn based tactical combat like Xcom / actual DnD would be nice... but maybe too hard
+ - Compromise: make it clasic rpg like Final Fantasy with cut away battles, less fun but easy
+
+
+Todo List:
+ - Create 2D overworld system (Earthbound style?)
+ - Create 2D battle system (turn based)
+ - Create game map for overworld
+ - Make some enemies for battle system
+ - Add game menus
+ - Add equipment or at least level up system
+
+ Art List:
+  - Overworld sprites (ground, houses, forest, cave, interior, river)
+  - Character sprites?
+  - Monster sprites 
+  - Menus
+  - The Time Egg
+
+ Sound List:
+  - Overworld theme
+  - Specific sub-region themes?
