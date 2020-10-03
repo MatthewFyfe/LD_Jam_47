@@ -52,11 +52,9 @@ func updateRaycastFacing(direction):
 
 func checkAction():
 	if(Input.is_action_just_pressed("ui_accept")):
-		print("Action!");
 		playerRayCast.force_raycast_update();
 		var whatWeHit = playerRayCast.get_collider();
 		
 		if(whatWeHit != null):
-			print(whatWeHit.name);
-			if(whatWeHit.name == "TestNPC"):
-				whatWeHit.get_node("PopupDialog").popup();
+			if("NPC" in whatWeHit.name):
+				whatWeHit.get_node("Polygon2D").visible = !whatWeHit.get_node("Polygon2D").visible 
