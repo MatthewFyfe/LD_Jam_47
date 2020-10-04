@@ -20,6 +20,7 @@ var sfx_chicken;
 
 # Nodes
 var playerRayCast;
+var audio;
 
 # Signals
 signal updatePlayerUI(HP, Mana, Gold, XP);
@@ -29,11 +30,21 @@ signal addItemToInventory();
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	playerRayCast = get_node("RayCast2D");
+	audio = get_node("AudioStreamPlayer")
 	HP = 50;
 	maxHP = 50;
 	XP = 0;
 	Gold = 0;
 	rng.randomize();
+	
+	# Set up SFX
+	sfx_playerHurt = load("res://SFX/damage.wav");
+	sfx_gremlint = load ("res://SFX/gremlint.wav");
+	sfx_chicken = load("res://SFX/chicken.wav");
+	sfx_item = load("res://SFX/item.wav");
+	sfx_knight = load("res://SFX/knight.wav");
+	sfx_hogweed = load("res://SFX/hogweed.wav");
+	
 
 # Called every physics tick
 func _physics_process(delta):
@@ -84,15 +95,24 @@ func checkAction():
 				# Pick up the chicken
 				addItemToInventory(whatWeHit);
 				whatWeHit.queue_free();
+				audio.set_stream(sfx_chicken);
+				audio.volume_db = 0;
+				audio.play();
 			elif("clover" in whatWeHit.name):
 				# Pick up lucky clover
 				cloverToggle = true;
 				addItemToInventory(whatWeHit);
+				audio.set_stream(sfx_item);
+				audio.volume_db = 0;
+				audio.play();
 				whatWeHit.queue_free();
 			elif("boots" in whatWeHit.name):
 				# Pick up magic boots
 				speed = speed * 2;
 				addItemToInventory(whatWeHit);
+				audio.set_stream(sfx_item);
+				audio.volume_db = 0;
+				audio.play();
 				whatWeHit.queue_free();
 
 
@@ -119,6 +139,9 @@ func handleInterestingCollisions(collision):
 		XP += 10;
 		Gold += 5;
 		# TODO: play sounds
+		audio.set_stream(sfx_hogweed);
+		audio.play();
+		audio.volume_db = 0;
 		collision.collider.queue_free();
 	elif("Gremlint" in whatWeHit):
 		if(takeDamage):
@@ -126,6 +149,9 @@ func handleInterestingCollisions(collision):
 		XP += 5;
 		Gold += 20;
 		# TODO: play sounds
+		audio.set_stream(sfx_gremlint);
+		audio.volume_db = -10;
+		audio.play();
 		collision.collider.queue_free();
 	elif("Knight" in whatWeHit):
 		if(takeDamage):
@@ -133,6 +159,9 @@ func handleInterestingCollisions(collision):
 		XP += 15;
 		Gold += 15;
 		# TODO: play sounds
+		audio.set_stream(sfx_knight);
+		audio.volume_db = -1;
+		audio.play();
 		collision.collider.queue_free();
 	elif("Priest" in whatWeHit):
 		if(HP < maxHP && Gold > 0):

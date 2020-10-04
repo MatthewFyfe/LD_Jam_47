@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Ld 47"
-run/main_scene="res://Scenes/MainOverworld.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://GFX/Items/EggLogo.png"
 
 [input]
