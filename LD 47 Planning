@@ -25,3 +25,22 @@ Todo List:
  Sound List:
   - Overworld theme
   - Specific sub-region themes?
+
+
+Combat System:
+  - Just do regular turn based rpg. Have quick and slow player actions to determine who goes first (a quick attack for normal damage, slow attack for 1.5x, etc)
+  - Have 2 or 3 party member slots? Can be filled with various other npcs
+  - Give xp and loot, go to town to use it (training, shop)
+
+  - Scratch that all, I'll just do "God of Thunder" style gameplay. Seems like less work
+
+Main Story:
+  - player has 24 minutes (hours) to save the time egg, if the egg is damaged time resets.
+  - Expected gameplay is to restart a few times and find the optimal path.
+  - Each playthrough should be quick and not have too many tedius sections
+
+Monsters:
+  - Hogweed (done)
+  - Gremlints (done)
+  - People (knight done, villager done)
+  - Chickens (mostly done)

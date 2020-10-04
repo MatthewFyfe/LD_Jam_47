@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex"
+path="res://.import/stoneSlab.png-21d15a8a2e866c76a70f069352e0e527.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Nature/grass1.png"
-dest_files=[ "res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex" ]
+source_file="res://GFX/Buildings/stoneSlab.png"
+dest_files=[ "res://.import/stoneSlab.png-21d15a8a2e866c76a70f069352e0e527.stex" ]
 
 [params]
 

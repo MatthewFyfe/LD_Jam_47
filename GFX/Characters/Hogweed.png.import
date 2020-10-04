@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex"
+path="res://.import/Hogweed.png-34cc8177d65ee54f9f4669a0387f4297.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Nature/grass1.png"
-dest_files=[ "res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex" ]
+source_file="res://GFX/Characters/Hogweed.png"
+dest_files=[ "res://.import/Hogweed.png-34cc8177d65ee54f9f4669a0387f4297.stex" ]
 
 [params]
 

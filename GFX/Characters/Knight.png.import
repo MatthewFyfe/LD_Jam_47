@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex"
+path="res://.import/Knight.png-75d698d27503e7cd3c570348126b3c65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Nature/grass1.png"
-dest_files=[ "res://.import/grass1.png-de60dc78161899c4f1a384ba16c1e31f.stex" ]
+source_file="res://GFX/Characters/Knight.png"
+dest_files=[ "res://.import/Knight.png-75d698d27503e7cd3c570348126b3c65.stex" ]
 
 [params]
 
