@@ -20,7 +20,7 @@ func _ready():
 	rng.randomize();
 	
 	if(monsterType == "Knight"):
-		player = get_node("../Player");
+		player = get_node("../../Player");
 		viewRayCast = get_node("RayCast2D");
 
 

@@ -57,7 +57,7 @@ margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true
@@ -68,13 +68,14 @@ __meta__ = {
 [node name="Item2" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 350, 30 )
 frames = ExtResource( 2 )
+animation = "none"
 
 [node name="Label" type="Label" parent="ColorRect/Item2"]
 margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true
@@ -85,13 +86,14 @@ __meta__ = {
 [node name="Item3" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 450, 30 )
 frames = ExtResource( 2 )
+animation = "none"
 
 [node name="Label" type="Label" parent="ColorRect/Item3"]
 margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true
@@ -102,13 +104,14 @@ __meta__ = {
 [node name="Item4" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 550, 30 )
 frames = ExtResource( 2 )
+animation = "none"
 
 [node name="Label" type="Label" parent="ColorRect/Item4"]
 margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true
@@ -119,13 +122,14 @@ __meta__ = {
 [node name="Item5" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 650, 30 )
 frames = ExtResource( 2 )
+animation = "none"
 
 [node name="Label" type="Label" parent="ColorRect/Item5"]
 margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true
@@ -136,13 +140,14 @@ __meta__ = {
 [node name="Item6" type="AnimatedSprite" parent="ColorRect"]
 position = Vector2( 750, 30 )
 frames = ExtResource( 2 )
+animation = "none"
 
 [node name="Label" type="Label" parent="ColorRect/Item6"]
 margin_left = -35.0
 margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 36.0
-text = "Crappy Tree"
+text = "Pocket"
 align = 1
 valign = 1
 clip_text = true

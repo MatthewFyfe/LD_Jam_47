@@ -4,7 +4,7 @@
 [ext_resource path="res://GFX/TestArt/TestFace.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 15.0
+radius = 14.0
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
@@ -37,6 +37,7 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

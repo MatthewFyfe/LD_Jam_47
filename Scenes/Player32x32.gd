@@ -4,28 +4,36 @@ extends KinematicBody2D
 var gridSize = 32;
 export (int) var speed = 100;
 var facing_direction = "down";
+var maxHP;
 var HP;
-var Mana;
 var XP;
 var Gold;
+var cloverToggle = false;
+var rng = RandomNumberGenerator.new()
 
 var sfx_playerHurt;
 var sfx_hogweed;
+var sfx_gremlint;
+var sfx_knight;
+var sfx_item;
+var sfx_chicken;
 
 # Nodes
 var playerRayCast;
 
 # Signals
-signal updatePlayerUI(HP, Mana, Gold, XP)
+signal updatePlayerUI(HP, Mana, Gold, XP);
+signal checkWinCondition();
+signal addItemToInventory();
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	playerRayCast = get_node("RayCast2D");
 	HP = 50;
-	Mana = 10;
+	maxHP = 50;
 	XP = 0;
 	Gold = 0;
-
+	rng.randomize();
 
 # Called every physics tick
 func _physics_process(delta):
@@ -70,34 +78,73 @@ func checkAction():
 		
 		if(whatWeHit != null):
 			if("NPC" in whatWeHit.name):
-				whatWeHit.get_node("Polygon2D").visible = !whatWeHit.get_node("Polygon2D").visible 
+				# Open NPC text box
+				whatWeHit.get_node("Polygon2D").visible = !whatWeHit.get_node("Polygon2D").visible
+			elif("Chicken" in whatWeHit.name):
+				# Pick up the chicken
+				addItemToInventory(whatWeHit);
+				whatWeHit.queue_free();
+			elif("clover" in whatWeHit.name):
+				# Pick up lucky clover
+				cloverToggle = true;
+				addItemToInventory(whatWeHit);
+				whatWeHit.queue_free();
+			elif("boots" in whatWeHit.name):
+				# Pick up magic boots
+				speed = speed * 2;
+				addItemToInventory(whatWeHit);
+				whatWeHit.queue_free();
 
 
 # Send a signal to update player stats in UI
 func updateStats():
-	emit_signal("updatePlayerUI", HP, Mana, Gold, XP);
+	emit_signal("updatePlayerUI", HP, maxHP, Gold, XP);
 
 
 # If the player hit a monster or something, handle results
 func handleInterestingCollisions(collision):
 	# Most enemies will just exchange damage and drop loot
 	var whatWeHit = collision.collider.name;
+	var takeDamage = true;
+	
+	if(cloverToggle == true):
+		var ranNum = rng.randf();
+		if(ranNum >= 0.2):
+			takeDamage = false;
+		
 	
 	if("Hogweed" in whatWeHit):
-		HP -= 10;
+		if(takeDamage):
+			HP -= 10;
 		XP += 10;
 		Gold += 5;
 		# TODO: play sounds
 		collision.collider.queue_free();
 	elif("Gremlint" in whatWeHit):
-		HP -= 15;
+		if(takeDamage):
+			HP -= 15;
 		XP += 5;
 		Gold += 20;
 		# TODO: play sounds
 		collision.collider.queue_free();
 	elif("Knight" in whatWeHit):
-		HP -= 20;
+		if(takeDamage):
+			HP -= 20;
 		XP += 15;
 		Gold += 15;
 		# TODO: play sounds
 		collision.collider.queue_free();
+	elif("Priest" in whatWeHit):
+		if(HP < maxHP && Gold > 0):
+			Gold -= 1;
+			HP += 1;
+	elif("Trainer" in whatWeHit):
+		if(XP > 0):
+			XP -= 1;
+			maxHP += 1;
+	elif("TimeEgg" in whatWeHit):
+		emit_signal("checkWinCondition");
+
+
+func addItemToInventory(item):
+	emit_signal("addItemToInventory", item);

@@ -18,9 +18,9 @@ Todo List:
  Art List:
   - Overworld sprites (ground, houses, forest, cave, interior, river)
   - Character sprites?
-  - Monster sprites 
+  - Monster sprites (sorta done)
   - Menus
-  - The Time Egg
+  - The Time Egg (done)
 
  Sound List:
   - Overworld theme
@@ -42,5 +42,9 @@ Main Story:
 Monsters:
   - Hogweed (done)
   - Gremlints (done)
-  - People (knight done, villager done)
-  - Chickens (mostly done)
+  - People (knight done, villager done, priest and trainer done)
+  - Chickens (done)
+
+Resources:
+  XP - use to increase max HP with trainer 
+  Gold - use to heal hp with priest (up to max)
