@@ -39,7 +39,7 @@ current = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 5, 5 )
 frames = SubResource( 6 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Label" type="Label" parent="."]

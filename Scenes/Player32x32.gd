@@ -64,6 +64,16 @@ func handlePlayerMovement(delta):
 	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left");
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up");
 	
+	# Find if we are facing mostly up,down,left,right
+	if(Input.is_action_just_pressed("ui_up")):
+		updateFacing("up");
+	elif(Input.is_action_just_pressed("ui_down")):
+		updateFacing("down");
+	elif(Input.is_action_just_pressed("ui_left")):
+		updateFacing("left");
+	elif(Input.is_action_just_pressed("ui_right")):
+		updateFacing("right");
+	
 	# If input is digital, normalize it for diagonal movement
 	if abs(direction.x) == 1 and abs(direction.y) == 1:
 		direction = direction.normalized();
@@ -75,6 +85,17 @@ func handlePlayerMovement(delta):
 	# Apply movement
 	var movement = speed * direction * delta;
 	return move_and_collide(movement);
+
+
+# Adjust sprite for up/down left/right facing
+func updateFacing(newDirection):	
+	var anim = get_node("AnimatedSprite");
+	if(newDirection == "left"):
+		anim.flip_h = true;
+	else:
+		anim.flip_h = false;
+		
+	anim.animation = newDirection;
 
 
 # Adjust the cast_to of the players raycast (facing)
